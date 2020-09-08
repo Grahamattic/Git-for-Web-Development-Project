@@ -1,0 +1,321 @@
+## Task 2: MVP
+
+Completed CodePen: https://codepen.io/ShenicaGraham/pen/XWdVEwj?editors=1100
+
+Review Questions ********************************************************************************************
+
+    1.  What is Semantic HTML?
+        HTMl is semantic if the name of the element gives information about that element (ie. you can
+        tell from the name what the element does or what is is for). Non-semantic tags are more obscure.
+
+    2.  What is HTML used for? 
+        HTML is a web development language, called a "markup language". It is designed to graphically
+        display data. The browser reads HTML, then uses it as a display guide. HTML is essentially a
+        way to box content in a meaningful way.
+
+    3.  What is an attribute and where do we put it?
+        An attribute is a special flag on an element that supplies data to that element. We use
+        attributes to include information in an element that should not render on the page although
+        it provides some information.
+
+    4.  What is the h1 tag used for? How many times should I use it on a page?
+        The h1 header tag is used to denote the most important heading on a page. It should be used
+        only once on any given page.
+
+    5.  Name two tags that have required attributes.
+        An anchor tag requires an href attribute.
+        An img tag requires a alt attribute.
+
+    6.  What do we put in the head of our HTML document? 
+        The HTML document begins with the following details:
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+            <link rel="stylesheet" type="text/css" href="style.css">
+        </head>
+        The <head> must contain a <title>. It can also
+        contain the following elements:
+        <style>
+        <base>
+        <link>
+        <meta>
+        <script>
+        <noscript>
+
+    7.  What is an id? 
+        An id is a unique identifier of an HTML element on a page. It is case sensitive and can not
+        include spaces, tabs, or other whitespaces. It must contain at least one character. To use an
+        id, the syntax is hash (#) followed by a unique name. The CSS properties must be defined in
+        order for the id to take effect. An id can be applied to any HTML element, except for the
+        following: <base>, <head>, <html>, <meta>, <script>, <style>, and <title>.
+
+    9.  How many times can I use the same id on a page?
+        An id can only be used once on a single page.
+
+    10. What is a class?
+        A class specifies a class name used in a CSS style sheet to style an HTML element.
+
+    11. What elements can I add a class to?
+        You can add a class attribute to any HTML element.
+
+    12. How many times can I use the same class on a page?
+        A class can be used multiple times to style all instances of the class by one CSS selector.
+        HTML elements can also belong to several classes at once.
+
+    13. How do I get my link to open in a new tab?
+        To make a link open in a new tab, add the "_blank" attribute to the anchor tag as follows:
+        <a href="http://shenicargraham.com" target="_blank" title="Shenica's Portfolio">Shenica's Portfolio</a>
+
+    14. What is the alt attribute in the image tag used for? 
+        The alt attribute will display as alternate text when the associated image is not available,
+        or when a screen reader is used.
+
+    15. How do I reference an id?
+        To reference an id, insert a # symbol before the id name as shown below:
+            #name {
+                color: black;
+            }
+
+    16. What is the difference between a section and a div?
+        A <section> groups content according to a meaningful theme as with related content that would
+        be grouped in an outline of the page. A <div> groups content, but does not convey any meaning
+        in addition to what may be seen from its class, lang and title attributes.
+
+    17. What is CSS used for?
+        CSS is a language used to add style and layout to web pages. CSS works with HTML to create the
+        webpages that are asthetically pleasing. The browser reads the CSS after it reads the HTML.
+
+    18. How do we select an element? Example - every h2 on the page.
+        To select an element, we enter the element name in CSS followed by curly braces as follows:
+        h2 {
+            font-size: 16px;
+        }
+
+    19. What is the difference between a class and an id? - Give me an example of when I might use each
+        one. A class can be used more than once on a page. An element can only be used once on a page.
+        An element can contain several classes. You might use a class to apply the same attributes to
+        several elements. You might use an id to apply unique attributes to a specific element.
+
+    20. How do we select classes in CSS?
+        To select a class in CSS, insert a "." (period (full-stop) punctuation mark in front
+        of the class name as follows:
+        .class {
+            color: red;
+        }
+
+    21. How do we select a p element with a single class of “human”?
+        To select a paragraph element with a single class of "human", add "p .human" to the
+        CSS as follows:
+        p.human {
+            border: none;
+        }
+
+    22. What is a parent child selector? When would this be useful?
+        The "parent > child" selector selects all of the elements on a page that are direct children of
+        the specified parent element. Both the parent and child elements are required by the selector.
+        This is useful when you want to select an element more precisely than you could with a standard
+        selector (e.g. when selecting only the third list element in unordered list).
+
+    23. How do you select all links within a div with the class of sidebar?
+        To select all links within a div with the class of sidebar, add "div .sidebar" to the CSS
+        as shown below:
+        div .sidebar {
+            width: 680px;
+        }
+
+    24. What is a pseudo selector?
+        A pseudo-class is a selector in CSS that selects elements in a specific state such as being the
+        first element of their type of having a hover focus by the mouse pointer. Pseudo selectors start
+        with a colon (:) and are followed by a keyword. You might use this instead of a class when you 
+        want to apply CSS to the first element on the page, even if that first element changes because
+        something is added to the top of the page. Since the CSS targets the first element, no matter what
+        comes first, you will not have to re-apply a class to the first element when it is overridden by
+        something else being added to the HTML before it.
+
+    25. What do we use to change the spacing between lines?
+        To change the spacing between lines, we use "line-spacing:" following a pixel value as follows:
+            p {
+                line-spacing: 14px;
+            }
+
+    26. What do we use to change the spacing between letters?
+        To change the spacing between letters, we use "letter-spacing:" following a pixel value as follows:
+        p {
+            letter-spacing: 4px;
+        }
+
+    27. What do we use to to change everything to CAPITALS? lowercase? Capitalize?
+        To change everything to CAPITALS, use "text-transform: uppercase;"
+        To change everything to lowercase, use "text-transform: lowercase;"
+        To change everything to Capitalize, use "text-transform: capitalize;"
+
+    28. How do I add a 1px border around my div that is dotted and black?
+        Add to the selector properites as folows:
+        div {
+            border: 1px dotted black;
+        }
+
+    29. How do I select everything on the page?
+        To select everything on the page, use the universal selector "*" as follows:
+        * {
+            background: whitesmoke;
+        }
+
+    30. How do I write a comment in CSS?
+        To write a comment in CSS, begin with <!-- followed by your comment, followed by -->
+
+    31. How do I find out what file I am in, when I am using the command line?
+        To find out what file you are in, use the pwd command.
+
+    32. Using the command line - how do I see a list of files/folders in my current folder?
+        To see a list of files / folders in the current directory (folder), use the command "dir" or "ls"
+        (that is "lowercase L" followed by "s").
+
+    33. How do I remove a file via the command line? Why do I have to be careful with this? 
+        When you remove a file, it does not go to the trash bin from whence it could be easily restored.
+        When you delete a file via the command line, it is gone and very difficult, if possible at all,
+        to recover.
+
+    34. Why should I use version control?
+        Version control avoids merge conflicts that could arise as a result of conflicting code. It keeps
+        a chronological record of changes that can be reverted to if something breaks. It records who did
+        what. It allows for review and approval before a merge.
+
+    35. How often should I commit to github?
+        You should git add, then git commit after each meaningful change. If you have several
+        changes, you should have had several commits before you ever have a push.
+
+    36. What is the command we would use to push our repo up to github?
+        To push your repo up to GitHub, we use the "git commit -m" command followed by 
+        “a meaningfully semantic description of the change that was made.”
+
+    37. Walk me through Lambda's Git flow.
+
+        1.  From GitHub.com, navigate to the repository (Repo) you will be working on. Make sure you are on the
+            correct assignment, the LambdaSchool repository.
+
+        2.  Click the "Fork" button to create your own copy of the Repo (it should be forked to your GitHub
+            account (handle)). Forking creates an exact copy of the original. 
+            
+            If you have more than one GitHub handle and or another option for saving your fork (such as a
+            linked organization), GitHub will ask you where the forked Repo should be stored. You should select
+            the GitHub handle that you use for Lambda School projects, from which will provide links for your 
+            Team Lead (TL) to review. Forking should take a few seconds. After forking, verify that your GitHub
+            handle displays before the "/RepoName".
+
+            There should be a tracking link below your handle / Repo name that says, “Forked from” followed by
+            the original Repo creator’s handle / Repo name.
+
+        3.  Add your TL to your forked repo as a collaborator. This sends a request (does not add
+            your TL automatically). This could be done just before making a pull request, but if you
+            do it now it gives your TL time to accept before you need to add him or her as a reviewer
+            later (which you will not be able to do if the request for collaborator has not yet been
+            accepted).
+
+                a.	Click Settings / Manage Access. Scroll down when the Manage Access page displays.
+                b.  Click the Invite a Collaborator button.
+                c.  Enter your TL’s GitHub handle in the Invite a collaborator to “repository name” dialog.
+                d.	Select the blue banner with your TL’s name and image from the dropdown menu.
+                e.  Click the green Add “your TL’s name” to “repository name” button.
+                f.  Click the "< > Code" link or the repository name to return to the main repository page.
+
+        4.  Copy the forked Repo's URL. 
+        
+                a.  From the main repository page, click the green Code button.
+                b.  Copy the URL. Checkpoint: verify that your GitHub handle is in the URL.
+
+        5.  From your Command Line Interface (CLI), clone the forked Repo.
+        
+                a.  Open your CLI.
+                b.  Use the cd command to navigate into the folder where you want to store your Repo clone.
+                c.  Use the command "git clone" followed by a space, followed by the URL of your forked Repo
+                    that you copied in step 4".
+
+                Checkpoint: Type the command "dir" or "ls" (lower-case “L”, “s”) to verify that your cloned
+                files are accessible. The name of the folder you just cloned should be listed as a file in
+                the directory.
+
+        6.  Create your own branch of the forked Repo.
+
+                a.  From your CLI, use the cd command to enter Repo clone folder you created in step 5.
+                    Notice the highlighted word, "(master)" following your cloned Repo folder name. This is
+                    the current branch of the Repo. DO NOT MAKE CHANGES HERE.
+                b.  Use the git checkout -b 'firstname-lastname’ command (no spaces, only a hyphen) to create
+                    your own branch of the Repo (this is the branch where you will do your work). The CLI displays
+                    “Switched to a new branch ‘firstname-lastname’. You will need to be in this branch when you
+                    stage (add) and commit your edits using your CLI.
+
+                Checkpoint: The highlighted branch name should now be your (firstname-lastname). From here, you
+                can work on assignments locally in your own Repo branch.
+
+        7.  Edit files on your repo branch (add and commit changes).
+        
+                a.  Open your "firstname-lastname" Repo branch directory in Visual Studio Code (VSC).
+                b.  Add (stage) your changes to your repo branch as often as is meaningful using "git add ."
+                    Staging makes your changes ready to commit.
+                c.  Use "git commit -m" followed by "Your commit description" to commit each change after
+                    staging it. Make sure your commit description clearly identifies the change
+                    you just made. This description (comment) is saved to the commit log.
+
+        8.  After completing the final commit on your cloned Repo branch, use “git push origin" followed by 
+            a space, followed by "your-branch-name" to push your changes back up from your local-computer-based
+            Repo branch, to your GitHub hosted Repo. Now that your repo changes are on GitHub, you can submit a
+            Pull Request.
+
+        9. Create a Pull Request (PR) from the branch that you’ve created (your "firstname-lastname") into
+            the master branch of your own repository. When creating the PR, the branch-name to specify is the
+            same name that you entered when you used the git checkout -b command (e.g., your "firstname-lastname").
+
+                a.	Return to your forked project repo on GitHub.com. Checkpoint: Verify that you are administering
+                    your FORKED Repo, not the original Lambda one.
+                b.	Click the Branch:master button.
+                c.	Select your "firstname-lastname" branch from the dropdown menu.
+                d.	Click the green Compare and pull request button to make a pull request on your name branch.
+                    The Open a Pull Request page displays your commit comment.
+                e.	Scroll down. Your changes are highlighted in the code comparison.
+                f.	Scroll back up. When submitting a PR, the repository will default to the original Repo (that
+                    you forked – the Lambda one). This needs to be changed before you submit your PR.
+                g.	Click the base repository button. 
+                h.	Select your forked repo from the dropdown menu. The base repository will now show your forked Repo.
+
+        10. Add your TL as a reviewer on the pull request before submitting.
+
+                a.	Click Reviewers in the right border menu to select your TL.
+                b.	Select your TL’s name or image from the dropdown menu. The Open a Pull Request page now displays
+                    your TL as a Reviewer on your Pull Request. You are now ready to submit the PR.
+
+        11.	Click the green "Create pull request" button to submit your PR. A pull summary displays.
+
+        12. Your TL will count the sssignment as completed by merging the HW back into master "STUDENT FORK".
+            
+
+Stretch Questions *******************************************************************************************
+
+    1.  What is the difference between an inline element and a block element?
+        An inline element is included in the current line of code and does not start on a new line. It does
+        not add space after itself, taking up only as much width as is necessary. A block element fills the
+        entire space of its parent element, starts on a new line, and takes up the full width available,
+        forcing the next piece of content to be on a new line.
+
+    2.  What happens when an element is positioned absolutely? 
+        When an element is positioned absolutely, it is taken out of the normal document layout flow.
+        Rather, it lives on its own layer of the page that is separate from everything else. 
+
+    3.  How do I make an element take up only the amount of space it needs but
+        also have the ability to give it a width?
+        Use display: inline-block, which does not add a new line but allows the element to sit next to other
+        elements. It also allows you to set a width and height on the element, while taking up only the 
+        amount of space that is needed.
+
+    4.  Name 3 elements that are display block by default, 2 elements that are 
+        display inline by default and 1 element that is display inline-block by default.
+        Three elements that display block by default are: <div>, <footer>, and <blockquote>.
+        Two elements that display inline by default are: <a> and <span>.
+        One element that displays inline-block by default is: 
+
+    5.  In your own words, explain the box model. What is the "fix" for the box
+        model, in other words, how do we make all elements respect the width we've
+        given them? 
