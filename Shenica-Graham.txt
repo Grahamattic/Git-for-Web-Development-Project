@@ -295,27 +295,37 @@ Review Questions ***************************************************************
 Stretch Questions *******************************************************************************************
 
     1.  What is the difference between an inline element and a block element?
+
         An inline element is included in the current line of code and does not start on a new line. It does
         not add space after itself, taking up only as much width as is necessary. A block element fills the
         entire space of its parent element, starts on a new line, and takes up the full width available,
         forcing the next piece of content to be on a new line.
 
-    2.  What happens when an element is positioned absolutely? 
+    2.  What happens when an element is positioned absolutely?
+
         When an element is positioned absolutely, it is taken out of the normal document layout flow.
         Rather, it lives on its own layer of the page that is separate from everything else. 
 
     3.  How do I make an element take up only the amount of space it needs but
         also have the ability to give it a width?
+
         Use display: inline-block, which does not add a new line but allows the element to sit next to other
         elements. It also allows you to set a width and height on the element, while taking up only the 
         amount of space that is needed.
 
     4.  Name 3 elements that are display block by default, 2 elements that are 
         display inline by default and 1 element that is display inline-block by default.
+
         Three elements that display block by default are: <div>, <footer>, and <blockquote>.
         Two elements that display inline by default are: <a> and <span>.
-        One element that displays inline-block by default is: 
+        One element that displays inline-block by default is: <img>.
 
-    5.  In your own words, explain the box model. What is the "fix" for the box
-        model, in other words, how do we make all elements respect the width we've
-        given them? 
+    5.  In your own words, explain the box model. What is the "fix" for the box model, in other words,
+        how do we make all elements respect the width we've given them?
+
+        According to the box model, when a browser parses CSS, it renders a rectangular box for each HTML element.
+        Each box has four areas defined by its respective edges: the content edge, padding edge, border edge, and
+        margin edge. CSS specifies the properties and styling of each box, which has content (the text or image),
+        padding (blank space around the content), border, and margin (blank space around the border). While most html
+        elements are boxes, some such as <span>, <a>, and <button>, do not follow the rules of the box model. To make
+        them conform to the box model, we use the CSS display:inline; property.
