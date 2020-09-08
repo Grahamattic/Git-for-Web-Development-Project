@@ -324,8 +324,12 @@ Stretch Questions **************************************************************
         how do we make all elements respect the width we've given them?
 
         According to the box model, when a browser parses CSS, it renders a rectangular box for each HTML element.
-        Each box has four areas defined by its respective edges: the content edge, padding edge, border edge, and
-        margin edge. CSS specifies the properties and styling of each box, which has content (the text or image),
-        padding (blank space around the content), border, and margin (blank space around the border). While most html
-        elements are boxes, some such as <span>, <a>, and <button>, do not follow the rules of the box model. To make
-        them conform to the box model, we use the CSS display:inline; property.
+        CSS specifies the properties and styling of each box, which has a content edge, padding edge, border edge,
+        and margin edge. The content (text or image) is inside the padding (blank space around the content), which
+        is inside the border, which is inside the margin (an invisible space around the border). While most html
+        elements are boxes, some such as <span>, <a>, and <button>, do not follow the rules of the box model (to
+        make them conform to the box model, we use the CSS display:inline property). The padding, between the border
+        and the content, is both transparent and editable. Using pixels (px) and relative percent (%) of the screen,
+        we can communicate with the browser, specifying the width and height of box elements such as divs.
+
+        To make all elements respect the width we've given them, we use position: relative.
